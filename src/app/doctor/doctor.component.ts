@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Doctor } from '../home/doctor';
 
 @Component({
   selector: 'app-doctor',
@@ -8,4 +9,7 @@ import { Component } from '@angular/core';
 
 export class DoctorComponent {
   buttonClick:boolean = true;
+  isShown:boolean = false;
+  @Input()doctors: Doctor;
+
 }
