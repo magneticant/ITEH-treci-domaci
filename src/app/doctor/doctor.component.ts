@@ -9,7 +9,7 @@ import { Doctor } from '../home/doctor';
 
 export class DoctorComponent {
   buttonClick:boolean = true;
-  isShown:boolean = false;
-  @Input()doctors: Doctor;
+  isShown:boolean = true;
+  @Input()doctor: Doctor;
 
 }

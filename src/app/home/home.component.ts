@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Doctor } from './doctor';
 
 
@@ -8,10 +8,12 @@ import { Doctor } from './doctor';
   styleUrls: ['./home.component.scss']
 })
 
+
+
 export class HomeComponent {
   heading: string = 'Prijava pregleda';
 
-  products: Doctor[] = [
+  doctors: Doctor[] = [
     {
       name:'Marija Stekic',
       room: 403,
@@ -56,5 +58,10 @@ export class HomeComponent {
 
   numbers:number[] = [1,2,3,4,5,6]
   
+  // @Input() doctor: Doctor[];
+
+  // ngOnInit(): void {
+  //   this.doctors = this.doctor;
+  // }
 
 }

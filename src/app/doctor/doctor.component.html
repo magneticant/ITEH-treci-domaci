@@ -7,12 +7,12 @@
       class="image"
     />
     <h1>dr. Ana Spasic, radiolog</h1>
-    <p class="sala" *ngIf="isShown">403</p>
+    <p class="sala" *ngIf="isShown">{{doctor.room}}</p>
     <p class="description">Doktor Ana Spasic je vrsni radiolog, radi u struci vec 10 godina, i dostupna je svim radnim
       danima i praznicima.
     </p>
     <p>
-      <span>Na raspolaganju:</span>
+      <span>Odeljenje:</span>
       <button [ngClass]="{'classButtonClick' : buttonClick===true}">Zakazi pregled</button>
     </p>
   </div>
