@@ -12,4 +12,22 @@ export class DoctorComponent {
   isShown:boolean = true;
   @Input()doctor: Doctor;
 
+  onAddAppointment(){
+    if(this.doctor.available == true){
+      this.doctor.available = false;
+      alert("Pregled uspesno zakazan.")
+    }
+    else{
+      alert("Neuspesno zakazivanje. Doktor nije dostupan.")
+    }
+  }
+
+  onRemoveAppointment(){
+    if(this.doctor.available == false){
+      this.doctor.available = true;
+      alert("Pregled uspesno otkazan.")
+    }else{
+      alert("Nema zakazanog pregleda.")
+    }
+  }
 }

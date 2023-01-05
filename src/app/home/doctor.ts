@@ -4,4 +4,5 @@ export interface Doctor {
     description:string;
     picture:string;
     department:string;
+    available:boolean;
 }

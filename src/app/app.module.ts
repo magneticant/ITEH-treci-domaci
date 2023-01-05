@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DoctorComponent } from './doctor/doctor.component';
+import { BrownElDirective } from './directives/brown-el.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DoctorComponent
+    DoctorComponent,
+    BrownElDirective
   ],
   imports: [
     BrowserModule,

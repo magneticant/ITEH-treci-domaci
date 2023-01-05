@@ -1,19 +1,30 @@
 <div class="card">
     <img
-      src="../../assets/images/doctor1.jpg"
+      [src]="doctor.picture"
       alt="Telefon"
       width="90%"
       height="90%"
       class="image"
     />
-    <h1>dr. Ana Spasic, radiolog</h1>
+    <h1>{{doctor.name}}</h1>
     <p class="sala" *ngIf="isShown">{{doctor.room}}</p>
-    <p class="description">Doktor Ana Spasic je vrsni radiolog, radi u struci vec 10 godina, i dostupna je svim radnim
-      danima i praznicima.
-    </p>
+    <p class="description">{{doctor.description}}</p>
     <p>
-      <span>Odeljenje:</span>
-      <button [ngClass]="{'classButtonClick' : buttonClick===true}">Zakazi pregled</button>
+      <span appBrownEl>Odeljenje: {{doctor.department}}</span>
+      
+      <button
+      [ngClass]="{ classButtonClick: buttonClick}"
+      (click)="onAddAppointment()"
+    >
+      Zakazi pregled
+    </button>
+    <button
+      [ngClass]="{ classButtonClick: buttonClick}"
+      (click)="onRemoveAppointment()"
+    >
+      Otkazi pregled
+    </button>
+
     </p>
   </div>
   

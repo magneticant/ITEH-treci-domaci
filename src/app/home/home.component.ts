@@ -21,6 +21,7 @@ export class HomeComponent {
         'Marija Stekic je jedna od nasih najboljih doktorki, ima desetogodisnje iskustvo u radu sa onima kojima je neophodna intenzivna nega.',
       picture:'../../assets/images/doctor2.jpg',
       department:'Intenzivna nega',
+      available:false,
     },
     {
       name:'Marko Jovic',
@@ -29,6 +30,7 @@ export class HomeComponent {
         'Marko Jovic je nas vrsni diplomirani radiolog. Svoju diplomu je dobio na fakultetu medicine, univerzitet u Beogradu.',
       picture:'../../assets/images/doctor3.jpg',
       department:'Radiologija',
+      available:false,
     },
     {
       name:'Petar Petrovic',
@@ -37,6 +39,7 @@ export class HomeComponent {
         'Petar Petrovic je logoped, strucan za rad sa decom koje imaju govorne mane.',
       picture:'../../assets/images/doctor4.jpg',
       department:'Logopedija',
+      available:true,
     },
     {
       name:'Ana Marinovic',
@@ -45,6 +48,7 @@ export class HomeComponent {
         'Ana Marinovic je nas hirurg sa torakalnog odeljenja.',
       picture:'../../assets/images/doctor5.jpg',
       department:'Torakalno',
+      available:true,
     },
     {
       name:'Pavle Jokic',
@@ -53,6 +57,7 @@ export class HomeComponent {
         'Pavle Jokic je nas oftalmolog. Bavi se neintruzivnim lecenjem miopije i drugih ocnih problema.',
       picture:'../../assets/images/doctor6.jpg',
       department:'Oftalmologija',
+      available:true,
     },
   ];
 
