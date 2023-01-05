@@ -1,1 +1,6 @@
-<app-home></app-home>
+<app-header [appointments]="appNumber"></app-header>
+<app-home [doctors] = "doctors"
+    (appointmentMade)="onAddAppointment()"
+    (appointmentCanceled)="onRemoveAppointment()"
+
+></app-home>

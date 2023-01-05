@@ -2,16 +2,19 @@
     <h1 class="display-2 text-center">{{ heading }}</h1>
   </div>
 <div class="container">
-<!-- <app-doctor *ngFor = "let i of numbers"></app-doctor> -->
-<!-- <app-doctor></app-doctor>
-<app-doctor></app-doctor>
 
-<app-doctor></app-doctor> -->
-<!-- <div class="doctors"> -->
+<div>
+  <p>Pretrazi doktora</p>
+  <input type="text" [(ngModel)] = "search">
+  <p>Pretražuje se: {{search}}</p>
+</div>
+
   <app-doctor
     *ngFor="let p of doctors"
     [doctor]="p"
     class="doctor"
+    (appointmentMade) = "onAddAppointment()"
+    (appointmentCanceled) = "onRemoveAppointment()"
   ></app-doctor>
 </div>
-<!-- </div> -->
+
