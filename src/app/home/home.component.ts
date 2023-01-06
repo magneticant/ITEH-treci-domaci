@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { DoctorService } from '../services/doctor.service';
 import { Doctor } from './doctor';
 
 
@@ -10,10 +11,12 @@ import { Doctor } from './doctor';
 
 
 
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   heading: string = 'Prijava pregleda';
 
-  
+  constructor(private doctorService:DoctorService) {
+
+  }
 
   numbers:number[] = [1,2,3,4,5,6]
   search = "";
@@ -21,8 +24,9 @@ export class HomeComponent {
   @Output() appointmentMade = new EventEmitter<number>();
   @Output() appointmentCanceled = new EventEmitter<number>();
   @Input() doctors: Doctor[];
+
   ngOnInit(): void {
-    this.doctors = this.doctors;
+    this.doctors = this.doctorService.doctors;
   }
 
   onAddAppointment(){
@@ -32,4 +36,5 @@ export class HomeComponent {
   onRemoveAppointment(){
     this.appointmentCanceled.emit();
   }
+  
 }

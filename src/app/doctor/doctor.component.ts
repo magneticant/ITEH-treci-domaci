@@ -15,6 +15,7 @@ export class DoctorComponent {
   @Output() appointmentMade = new EventEmitter<number>();
   @Output() appointmentCanceled = new EventEmitter<number>();
 
+  
   onAddAppointment(){
     if(this.doctor.available == true){
       this.doctor.available = false;

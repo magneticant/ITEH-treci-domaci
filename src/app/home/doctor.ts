@@ -5,4 +5,5 @@ export interface Doctor {
     picture:string;
     department:string;
     available:boolean;
+    appointmentCount:number;
 }

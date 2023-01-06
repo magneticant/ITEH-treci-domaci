@@ -8,6 +8,8 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { BrownElDirective } from './directives/brown-el.directive';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 // import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
@@ -16,7 +18,9 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     DoctorComponent,
     BrownElDirective,
-    HeaderComponent
+    HeaderComponent,
+    AppointmentComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
