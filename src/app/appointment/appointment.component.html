@@ -1,2 +1,7 @@
 <h2>Trenutno nema prijava.</h2>
-<!-- <app-doctor></app-doctor>  -->
+<app-doctor
+*ngFor="let item of appointmentArray"
+[doctor] = "item"
+(appointmentMade)="add(item)" 
+(AppointmentCanceled)="subtract(item)" 
+></app-doctor> 

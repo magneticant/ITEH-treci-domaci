@@ -11,11 +11,11 @@
 
   <app-doctor
     
-    *ngFor="let p of doctors"
-    [doctor]="p"
+    *ngFor="let d of doctors"
+    [doctor]="d"
     class="doctor"
-    (appointmentMade) = "onAddAppointment()"
-    (appointmentCanceled) = "onRemoveAppointment()"
+    (appointmentMade) = "addDoctor(d)"
+    (appointmentCanceled) = "removeDoctor(d)"
   ></app-doctor>
   
 </div>

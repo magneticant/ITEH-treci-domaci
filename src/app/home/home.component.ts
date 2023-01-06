@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AppointmentService } from '../services/appointment.service';
 import { DoctorService } from '../services/doctor.service';
 import { Doctor } from './doctor';
 
@@ -14,7 +15,7 @@ import { Doctor } from './doctor';
 export class HomeComponent implements OnInit {
   heading: string = 'Prijava pregleda';
 
-  constructor(private doctorService:DoctorService) {
+  constructor(private doctorService:DoctorService, private appointmentService:AppointmentService) {
 
   }
 
@@ -36,5 +37,12 @@ export class HomeComponent implements OnInit {
   onRemoveAppointment(){
     this.appointmentCanceled.emit();
   }
-  
+
+  addDoctor(doctor:Doctor){
+    this.appointmentService.addDoctor(doctor);
+  }
+
+  removeDoctor(doctor:Doctor){
+    this.appointmentService.removeDoctor(doctor);
+  }
 }
