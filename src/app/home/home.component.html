@@ -1,14 +1,11 @@
-<div>
+<div class="titleclass">
+  
     <h1 class="display-2 text-center">{{ heading | titlecase}}</h1>
   </div>
 <div class="container">
+ 
 
-<div>
-  <p>{{'Pretrazi doktora' | lowercase}}</p>
-  <input type="text" [(ngModel)] = "search">
-  <p>Pretražuje se: {{search | titlecase}}</p>
-</div>
-
+<br>
   <app-doctor
     
     *ngFor="let d of doctors"
@@ -17,6 +14,11 @@
     (appointmentMade) = "addDoctor(d)"
     (appointmentCanceled) = "removeDoctor(d)"
   ></app-doctor>
-  
+  <br>
+  <div>
+    <p>{{'Pretrazi doktora' | lowercase}}</p>
+    <input type="text" [(ngModel)] = "search">
+    <p>Pretražuje se: {{search | titlecase}}</p>
+  </div>
 </div>
 

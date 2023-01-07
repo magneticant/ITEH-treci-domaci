@@ -1,10 +1,11 @@
 .card {
-    max-width: 300px;
-    margin: auto;
+
+    max-width: 500px;
+    margin: 10px;
     text-align: center;
     font-family: arial;
     border-radius: 30px;
-    background: linear-gradient(120deg, #ffffff, #e6e6e6);
+    background: linear-gradient(120deg, #8f82a4, #7e5d82);
     box-shadow: 10px 10px 20px#9c9c9c, -10px -10px 20px#ffffff;
   }
   
@@ -13,6 +14,7 @@
   }
 
   .image {
+    border-radius: 20%;
     max-width: 300px;
     padding-top: 3%;
     position: relative;
@@ -21,13 +23,14 @@
   }
   
   .description {
+    font-weight: bold;
     text-align:start;
     padding-left: 5%;
     padding-right: 5%;
   }
   
   .sala {
-    color: grey;
+    color: rgb(213, 228, 0);
     font-size: 22px;
   }
   
@@ -53,3 +56,18 @@
     border: 3px solid green !important;
   }
   
+  .nameBox{
+    padding: 8px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     border-radius: 10px;
+    //  background: linear-gradient(120 deg, rgb(247, 0, 255), rgb(186, 46, 139));
+    background-color: rgb(205, 148, 185);
+    margin: 10px;
+    box-shadow: 10px 10px 20px#a6a4a4, -10px -10px 20px#6b6161;
+    border-color: rgb(136, 13, 130);
+    border-style: solid;
+  }
+  .zauzece{
+    font-weight: bold;
+    color: red($color: #c80c0c);
+  }

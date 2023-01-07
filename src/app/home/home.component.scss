@@ -1,10 +1,10 @@
 .card {
-    max-width: 300px;
-    margin: auto;
+    max-width:100px;
+    margin: 20px;
     text-align: center;
     font-family: arial;
     border-radius: 30px;
-    background: linear-gradient(120deg, #ffffff, #e6e6e6);
+    background: linear-gradient(120deg, #98a9c0, #7ec9da);
     box-shadow: 10px 10px 20px#9c9c9c, -10px -10px 20px#ffffff;
   }
   
@@ -22,7 +22,7 @@
   }
   
   .sala {
-    color: grey;
+    color: rgb(187, 228, 3);
     font-size: 22px;
   }
   
@@ -45,6 +45,27 @@
   }
 
   .container {
+    padding: 10px;
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
+    background: linear-gradient(120deg, #c6d7ef, #7ec9da);
+    border-radius: 20px;
   }
+
+ .titleclass { 
+  background-color: #c6d7ef;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+ }
+ .display-2{
+  color: rgb(143, 41, 110);
+  background: linear-gradient(120deg, #97a7bf, #72adb9);
+  text-shadow: 3px 3px #5a5353;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-color: rgb(25, 7, 105);
+  border-style: inset;
+  padding-bottom: 10px;
+ }
+//  html { background-color: black; }

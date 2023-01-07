@@ -6,12 +6,14 @@
       height="90%"
       class="image"
     />
+    <div class="nameBox">
     <h1>{{doctor.name}}</h1>
+    </div>
     <p class="sala" *ngIf="isShown">{{doctor.room}}</p>
     <p class="description">{{doctor.description}}</p>
     <p>
-      <span *ngIf ="doctor.appointmentCount > 0">Zauzet!! </span>
-      <span appBrownEl>Odeljenje: {{doctor.department}}</span>
+      <span class = "zauzece" *ngIf ="doctor.appointmentCount > 0">Zauzet!! </span>
+      <span appBrownEl class = "odelj">Odeljenje: {{doctor.department}}</span>
       
       <button
       *ngIf="!isAppointmentPage"
