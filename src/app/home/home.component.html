@@ -1,12 +1,12 @@
 <div>
-    <h1 class="display-2 text-center">{{ heading }}</h1>
+    <h1 class="display-2 text-center">{{ heading | titlecase}}</h1>
   </div>
 <div class="container">
 
 <div>
-  <p>Pretrazi doktora</p>
+  <p>{{'Pretrazi doktora' | lowercase}}</p>
   <input type="text" [(ngModel)] = "search">
-  <p>Pretražuje se: {{search}}</p>
+  <p>Pretražuje se: {{search | titlecase}}</p>
 </div>
 
   <app-doctor

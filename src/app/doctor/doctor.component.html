@@ -10,15 +10,18 @@
     <p class="sala" *ngIf="isShown">{{doctor.room}}</p>
     <p class="description">{{doctor.description}}</p>
     <p>
+      <span *ngIf ="doctor.appointmentCount > 0">Zauzet!! </span>
       <span appBrownEl>Odeljenje: {{doctor.department}}</span>
       
       <button
+      *ngIf="!isAppointmentPage"
       [ngClass]="{ classButtonClick: buttonClick}"
       (click)="onAddAppointment()"
     >
       Zakazi pregled
     </button>
     <button
+      *ngIf="isAppointmentPage"
       [ngClass]="{ classButtonClick: buttonClick}"
       (click)="onRemoveAppointment()"
     >

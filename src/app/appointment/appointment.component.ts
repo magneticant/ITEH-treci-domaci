@@ -16,6 +16,11 @@ export class AppointmentComponent implements OnInit{
 
   ngOnInit(): void {
     this.appointmentArray = this.appointmentService.appointmentArray;
+    this.appointmentService.arrayLength.subscribe(length=>{
+        if(length > 0){
+          this.isEmpty = false;
+        }else this.isEmpty = true;
+    });
   }
 
   add(item:Doctor){

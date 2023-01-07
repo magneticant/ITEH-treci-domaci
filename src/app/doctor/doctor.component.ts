@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Doctor } from '../home/doctor';
 
 @Component({
@@ -14,8 +15,23 @@ export class DoctorComponent {
   appNumber:number = 0;
   @Output() appointmentMade = new EventEmitter<number>();
   @Output() appointmentCanceled = new EventEmitter<number>();
+  isAppointmentPage: boolean;
+  startingNUmber: number;
 
+  constructor(private router:Router){
+    // if(this.router.url === '/appointment')
+    // this.isAppointmentPage = true;
+  }
   
+  ngOnInit(): void{
+    this.startingNUmber = this.doctor.appointmentCount;
+
+    if(this.router.url === '/appointment')
+    this.isAppointmentPage = true;
+    else
+    this.isAppointmentPage = false;
+  }
+
   onAddAppointment(){
     if(this.doctor.available == true){
       this.doctor.available = false;
