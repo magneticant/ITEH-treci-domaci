@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { isEmpty } from 'rxjs';
 import { Doctor } from '../home/doctor';
 import { AppointmentService } from '../services/appointment.service';
@@ -9,6 +9,7 @@ import { AppointmentService } from '../services/appointment.service';
   styleUrls: ['./appointment.component.scss']
 })
 export class AppointmentComponent implements OnInit{
+
   appointmentArray: Doctor[] =[];
   isEmpty: boolean = true;
 

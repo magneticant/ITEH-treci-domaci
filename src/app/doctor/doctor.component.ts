@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Doctor } from '../home/doctor';
+import { AppointmentService } from '../services/appointment.service';
 
 @Component({
   selector: 'app-doctor',
@@ -18,7 +19,7 @@ export class DoctorComponent {
   isAppointmentPage: boolean;
   startingNUmber: number;
 
-  constructor(private router:Router){
+  constructor(private router:Router, private appointmentService:AppointmentService){
     // if(this.router.url === '/appointment')
     // this.isAppointmentPage = true;
   }
@@ -51,11 +52,13 @@ export class DoctorComponent {
       if(this.appNumber > 0){
       this.appNumber--;
       }
-      this.appointmentCanceled.emit(this.appNumber);
+      
+      
+      this.appointmentService.removeDoctor(this.doctor);
       alert("Pregled uspesno otkazan.")
+      
     }else{
       alert("Nema zakazanog pregleda.")
     }
   }
- 
 }

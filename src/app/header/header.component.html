@@ -2,7 +2,7 @@
   <a class="navbar-brand" routerLink ="home" routerLinkActive="success">
     Doktorska ordinacija
   </a>
-  <a class="navbar-brand btn" routerLink= "appointment" routerLinkActive="btn-success">
-    <button class="element">prijave</button>{{appointments}}
+  <a *ngIf="!isAppointmentPage" class="navbar-brand btn" routerLink= "appointment" routerLinkActive="btn-success">
+    <button  class="element">prijave</button>{{appointments}}
   </a>
 </nav>

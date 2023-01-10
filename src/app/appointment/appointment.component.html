@@ -1,12 +1,12 @@
 <h2 *ngIf="isEmpty; else doctors">Trenutno nema prijava.</h2>
 <ng-template #doctors>
 
-
+<div class="wrapper">
 <app-doctor
 *ngFor="let item of appointmentArray"
 [doctor] = "item"
 (appointmentMade)="add(item)" 
 (AppointmentCanceled)="subtract(item)" 
 ></app-doctor> 
-
+</div>
 </ng-template>

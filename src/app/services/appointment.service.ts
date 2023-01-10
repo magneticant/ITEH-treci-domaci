@@ -11,7 +11,7 @@ export class AppointmentService {
   constructor() { }
 
   addDoctor(doctor:Doctor){
-    alert(doctor.name);
+    // alert(doctor.name);
     const existingDoctor = this.appointmentArray.find(d=> d.name == doctor.name);
 
     if(!existingDoctor){
@@ -26,12 +26,15 @@ export class AppointmentService {
 
   removeDoctor(doctor:Doctor){
   const index = this.appointmentArray.findIndex(d=> d.name == doctor.name);
+  // alert("nadjen je doktor sa ovim indseksom.");
     if(index <0) return;
 
     this.appointmentArray[index].appointmentCount--;
+    
+  this.appointmentArray.splice(index,1);
+      
 
-    if(this.appointmentArray[index].appointmentCount == 0){
-      this.appointmentArray.splice(index,1);
-    }
+      
+    
   }
 }

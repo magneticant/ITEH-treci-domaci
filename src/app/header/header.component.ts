@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Event, NavigationEnd, Router } from '@angular/router';
 import { AppointmentService } from '../services/appointment.service';
 
 
@@ -9,8 +10,29 @@ import { AppointmentService } from '../services/appointment.service';
 })
 export class HeaderComponent {
   @Input() appointments: number = 0;
+  isAppointmentPage: boolean = true;
 
-  constructor(private appointmentService:AppointmentService){
+  ngOnInit(): void{
+  
+
+    if(this.router.url === '/appointment')
+    this.isAppointmentPage = true;
+    else
+    this.isAppointmentPage = false;
+  }
+  constructor(private router:Router,private appointmentService:AppointmentService){
+    this.router.events.subscribe((event: Event) => {
+      
+      if (event instanceof NavigationEnd) {
+          
+          if(this.router.url === '/appointment')
+              this.isAppointmentPage = true;
+           else
+              this.isAppointmentPage = false;
+      }
+
+     
+  });
     appointmentService.arrayLength.subscribe(length=> (this.appointments = length));
   }
 }

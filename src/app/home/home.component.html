@@ -15,9 +15,9 @@
     (appointmentCanceled) = "removeDoctor(d)"
   ></app-doctor>
   <br>
-  <div>
+  <div class="search-div">
     <p>{{'Pretrazi doktora' | lowercase}}</p>
-    <input type="text" [(ngModel)] = "search">
+    <input class = "input-class" type="text" [(ngModel)] = "search">
     <p>Pretražuje se: {{search | titlecase}}</p>
   </div>
 </div>
